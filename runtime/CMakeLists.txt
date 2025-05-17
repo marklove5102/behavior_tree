@@ -27,7 +27,7 @@ file(GLOB SRC_FILES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 add_library(behavior_tree_runtime  ${SRC_FILES})
 
 target_link_libraries(behavior_tree_runtime PUBLIC nlohmann_json::nlohmann_json any_container spdlog::spdlog magic_enum::magic_enum)
-
+target_include_directories(behavior_tree_runtime INTERFACE $<INSTALL_INTERFACE:include>)
 if(IS_TOPLEVEL_PROJECT)
 
 if(WITH_TEST)
