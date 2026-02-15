@@ -450,7 +450,7 @@ namespace spiritsaway::behavior_tree::runtime
 	bool action_agent::choose_idx(std::uint32_t idx, const std::string& array_bb_key, const std::string& dest_bb_key)
 	{
 		const auto& pre_val = blackboard_get(array_bb_key);
-		if (!pre_val.is_array() || pre_val.size() < idx)
+		if (!pre_val.is_array() || pre_val.size() <= idx)
 		{
 			return false;
 		}

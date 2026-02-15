@@ -27,3 +27,4 @@
 .vscode/settings.json
 
 runtime/build/
+/build
